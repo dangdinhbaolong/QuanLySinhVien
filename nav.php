@@ -7,12 +7,8 @@
 </head>
 <body>
     <nav>
-        <ul class="nav">
-            <li class="nav-item">
-                <a class="nav-link" href="index.php">Home</a>
-            </li>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
- Them sinh vien
+ Thêm sinh viên
 </button>
 
 <!-- The Modal -->
@@ -22,7 +18,7 @@
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">Modal Heading</h4>
+        <h1 class="modal-title">Thêm sinh viên</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 
@@ -30,7 +26,7 @@
       <div class="modal-body">
       <div class="container">
     <form action="Insert.php" method="post">
-        <h1 style="text-align: center;">Thêm sinh viên </h1>
+       
         <div class="mb-3 mt-3">
             <label class="form-label">Mã sinh viên :</label>
             <input type="text" class="form-control" id="masv" name="masv" required>
