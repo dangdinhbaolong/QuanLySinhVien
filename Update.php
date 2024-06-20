@@ -27,7 +27,7 @@ if (isset($_POST['btncapnhat'])) {
     } else {
         //echo "Sua that bai";
     }
-    header('location:home.php');
+    header('location:index.php');
 }
 $sql = "SELECT * FROM sinhvien WHERE masv='$this_id'";
 $result = mysqli_query($conn, $sql);
