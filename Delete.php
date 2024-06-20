@@ -9,5 +9,5 @@ if(mysqli_query($conn,$sql)){
 }else {
     echo "Xoa that bai";
 }
-header('location:home.php');
+header('location:index.php');
 ?>

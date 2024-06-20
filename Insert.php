@@ -25,6 +25,6 @@
         }else {
             echo "Them that bai";
         }
-        header('location:home.php');
+        header('location:index.php');
     }
     ?>
