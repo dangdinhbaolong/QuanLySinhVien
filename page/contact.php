@@ -10,14 +10,14 @@
 </head>
 
 <body>
-    <div class="container mt-3">
+    <div class="container mt-3" style="margin-bottom: 75px;">
         <h1 class="text-center">Contact Us</h1>
         <?php
         if (isset($_GET['status']) && $_GET['status'] == 'success') {
             echo '<div class="alert alert-success" role="alert">Thank you for contacting us! Your message has been sent.</div>';
         }
         ?>
-        <form action="../lib/contact.php" method="post">
+        <form action="lib/contact.php" method="post">
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" id="name" name="name" required>
