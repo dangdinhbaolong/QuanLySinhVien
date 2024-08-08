@@ -87,7 +87,7 @@ $row = mysqli_fetch_array($result);
                 <input type="email" class="form-control" id="email" name="email" value="<?php echo $row['email']; ?>">
             </div>
             <button type="submit" class="btn btn-success" name="btncapnhat">Cập nhật sinh viên</button>
-            <button type="submit" class="btn btn-success" name="btncapnhat"><a href="?page=home" style="text-decoration: none; color:white">Quay lại</a></button>
+            <button type="submit" class="btn btn-success" name="btncapnhat"><a href="/QuanLySinhVien/?page=home" style="text-decoration: none; color:white">Quay lại</a></button>
         </form>
     </div>
 </body>
