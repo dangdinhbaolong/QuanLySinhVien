@@ -43,7 +43,7 @@
             <h1>404</h1>
             <h2>Page Not Found</h2>
             <p>Sorry, the page you are looking for does not exist or has been moved.</p>
-            <a href="/" class="btn btn-primary">Go Home</a>
+            <a href="?page=home" class="btn btn-primary">Go Home</a>
         </div>
     </div>
 
