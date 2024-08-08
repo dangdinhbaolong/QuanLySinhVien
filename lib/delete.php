@@ -1,5 +1,5 @@
 <?php 
-include "Connect.php";
+include "../data/db.php";
 $this_id = $_GET['this_id'];
 echo $this_id;
 $sql = "DELETE FROM sinhvien WHERE masv='$this_id'";
@@ -9,5 +9,5 @@ if(mysqli_query($conn,$sql)){
 }else {
     echo "Xoa that bai";
 }
-header('location:index.php');
+header('Location: /QuanLySinhVien/?page=home');
 ?>

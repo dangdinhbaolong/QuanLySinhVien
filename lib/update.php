@@ -1,5 +1,5 @@
 <?php
-include "Connect.php";
+require "../data/db.php";
 $this_id = $_GET['this_id'];
 //echo $this_id;
 if (isset($_POST['btncapnhat'])) {
@@ -21,13 +21,14 @@ if (isset($_POST['btncapnhat'])) {
     $lop = $_POST['lop'];
     $que = $_POST['que'];
     $email = $_POST['email'];
-    $sql_up = "UPDATE sinhvien SET tensv ='$tensv',namsinh ='$ns' ,gioitinh ='$gt',lop ='$lop',quequan = '$que',email ='$email' WHERE masv='$masv' ";
+    $gpa = $_POST['gpa'];
+    $sql_up = "UPDATE sinhvien SET tensv ='$tensv',namsinh ='$ns' ,gioitinh ='$gt',lop ='$lop',quequan = '$que',email ='$email', gpa ='$gpa' WHERE masv='$masv' ";
     if (mysqli_query($conn, $sql_up)) {
         //echo "Sua thanh cong";
     } else {
         //echo "Sua that bai";
     }
-    header('location:index.php');
+    header('Location: /QuanLySinhVien/?page=home');
 }
 $sql = "SELECT * FROM sinhvien WHERE masv='$this_id'";
 $result = mysqli_query($conn, $sql);
@@ -47,7 +48,8 @@ $row = mysqli_fetch_array($result);
 <body>
 
     <div class="container mt-3">
-        <form action="Update.php" method="post">
+    <form action="../lib/update.php" method="post">
+
             <h1 style="text-align: center;">Cập nhật sinh viên</h1>
             <div class="mb-3 mt-3">
                 <label class="form-label">Mã sinh viên:</label>
@@ -85,7 +87,7 @@ $row = mysqli_fetch_array($result);
                 <input type="email" class="form-control" id="email" name="email" value="<?php echo $row['email']; ?>">
             </div>
             <button type="submit" class="btn btn-success" name="btncapnhat">Cập nhật sinh viên</button>
-            <button type="submit" class="btn btn-success" name="btncapnhat"><a href="index.php" style="text-decoration: none; color:white">Quay lại</a></button>
+            <button type="submit" class="btn btn-success" name="btncapnhat"><a href="?page=home" style="text-decoration: none; color:white">Quay lại</a></button>
         </form>
     </div>
 </body>

@@ -1,18 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php 
+require 'data/db.php';
+require 'lib/template.php';
+get_header();
+?>
+<?php 
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+$page =!empty($_GET['page'])?$_GET['page']:'home';
+$path = "page/{$page}.php";
 
-<body>
-    <?php
-    include "nav.php";
-    include "display.php";
-    ?>
-   
-</body>
-
-</html>
+if(file_exists($path)){
+    require $path;
+}else{
+    
+ require "inc/404.php";
+}
+?>
+<?php  
+get_footer();
+?>
