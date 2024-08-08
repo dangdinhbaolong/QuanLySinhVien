@@ -7,14 +7,14 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .error-page {
-            height: 100vh;
+            height: 67vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
         }
         .error-content {
-            max-width: 600px;
+            max-width: 400px;
             padding: 20px;
             background: #fff;
             border-radius: 10px;
