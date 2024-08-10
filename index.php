@@ -1,4 +1,10 @@
 <?php 
+session_start();
+
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header("Location: login_form.php"); 
+    exit();
+}
 require 'data/db.php';
 require 'lib/template.php';
 get_header();

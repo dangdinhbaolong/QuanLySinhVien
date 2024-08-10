@@ -29,8 +29,14 @@
                         <li class="nav-item">
                             <a class="nav-link" href="?page=contact">Liên hệ</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="?page=logout">Đăng xuất</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+</body>
+
+</html>

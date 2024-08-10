@@ -33,9 +33,7 @@
         </tr>
       </thead>
       <tbody>
-        <?php
-        session_start();
-        
+        <?php 
         if (isset($_SESSION['search_results'])) {
             $results = $_SESSION['search_results'];
             unset($_SESSION['search_results']);
